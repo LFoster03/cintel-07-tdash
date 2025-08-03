@@ -22,7 +22,7 @@ df = palmerpenguins.load_penguins()
 # 2. Set Page Options
 # --------------------------------------------
 # The page title will appear in the browser tab and top of the dashboard.
-ui.page_opts(title="Lindsay Foster's Penguins Dashboard", fillable=True)
+ui.page_opts(title="Lindsay Foster's Penguins Dashboard", fillable=True, favicon="../favicon-32x32.png")
 
 # --------------------------------------------
 # 3. Sidebar - Filters and Links
@@ -62,16 +62,16 @@ with ui.sidebar(title="Filter controls"):
 
 with ui.layout_column_wrap(fill=False):
 
-    # Total count of filtered penguins
-    with ui.value_box(showcase=icon_svg("earlybirds")):
+    # Total count of filtered penguins (custom color and new icon)
+    with ui.value_box(showcase=icon_svg("feather-pointed"), theme='bg-cyan'):
         "Penguin Count"
 
         @render.text
         def count():
             return filtered_df().shape[0]  # Count number of rows in filtered data
 
-    # Average bill length of filtered penguins
-    with ui.value_box(showcase=icon_svg("ruler-horizontal")):
+    # Average bill length of filtered penguins (custom color)
+    with ui.value_box(showcase=icon_svg("ruler-horizontal"), theme="bg-green"):
         "Average Bill Length"
 
         @render.text
@@ -79,8 +79,8 @@ with ui.layout_column_wrap(fill=False):
             # Format to 1 decimal place and add "mm"
             return f"{filtered_df()['bill_length_mm'].mean():.1f} mm"
 
-    # Average bill depth of filtered penguins
-    with ui.value_box(showcase=icon_svg("ruler-vertical")):
+    # Average bill depth of filtered penguins (custom color)
+    with ui.value_box(showcase=icon_svg("ruler-vertical"), theme="bg-indigo"):
         "Average Bill Depth"
 
         @render.text

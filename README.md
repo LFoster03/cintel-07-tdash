@@ -419,3 +419,24 @@ Add Your Own Comments: If you add features (like new charts or filters), documen
 
 Check the Render Functions: Anything decorated with @render will display output in the UI.
 
+## Bonus Modifications
+    # Total count of filtered penguins (custom color and new icon)
+    with ui.value_box(showcase=icon_svg("feather-pointed"), theme='bg-cyan'):
+        "Penguin Count"
+
+        @render.text
+        def count():
+            return filtered_df().shape[0]  # Count number of rows in filtered data
+
+    # Average bill length of filtered penguins (custom color)
+    with ui.value_box(showcase=icon_svg("ruler-horizontal"), theme="bg-green"):
+        "Average Bill Length"
+
+        @render.text
+        def bill_length():
+            # Format to 1 decimal place and add "mm"
+            return f"{filtered_df()['bill_length_mm'].mean():.1f} mm"
+
+    # Average bill depth of filtered penguins (custom color)
+    with ui.value_box(showcase=icon_svg("ruler-vertical"), theme="bg-indigo"):
+        "Average Bill Depth"
