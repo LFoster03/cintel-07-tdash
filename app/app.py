@@ -50,7 +50,7 @@ with ui.sidebar(title="Filter controls"):
 
 with ui.layout_column_wrap(fill=False):
     with ui.value_box(showcase=icon_svg("earlybirds")):
-        "Number of penguins"
+        "Penguin Count"
 
         @render.text
         def count():
