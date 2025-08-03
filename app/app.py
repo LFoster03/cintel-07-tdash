@@ -7,7 +7,7 @@ import palmerpenguins
 
 df = palmerpenguins.load_penguins()
 
-ui.page_opts(title="Penguins dashboard", fillable=True)
+ui.page_opts(title="Lindsay Foster's Penguins Dashboard", fillable=True)
 
 
 with ui.sidebar(title="Filter controls"):
