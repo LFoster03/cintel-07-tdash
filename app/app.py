@@ -25,7 +25,7 @@ df = palmerpenguins.load_penguins()
 # Shinylive will auto-detect it; no path required.
 ui.page_opts(
     title="Lindsay Foster's Penguins Dashboard",
-    fillable=True, favicon="/cintel-07-tdash/favicon.png"
+    fillable=True, favicon="/cintel-07-tdash/favicon.ico"
 )
 
 # --------------------------------------------
