@@ -22,7 +22,7 @@ df = palmerpenguins.load_penguins()
 # 2. Set Page Options
 # --------------------------------------------
 # The page title will appear in the browser tab and top of the dashboard.
-ui.page_opts(title="Lindsay Foster's Penguins Dashboard", fillable=True, favicon="favicon-32x32.png")
+ui.page_opts(title="Lindsay Foster's Penguins Dashboard", fillable=True, favicon="favicon.ico")
 
 # --------------------------------------------
 # 3. Sidebar - Filters and Links
